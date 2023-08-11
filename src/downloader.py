@@ -18,8 +18,8 @@ class Downloader:
         self.base_url = "https://api.github.com/repos"
         self.repositories = [
             {"user": "inotia00", "repo": "revanced-cli", "tag": "latest"},
-            {"user": "inotia00", "repo": "revanced-patches", "tag": "latest"},
-            {"user": "inotia00", "repo": "revanced-integrations", "tag": "latest"}
+            {"user": "YT-Advanced", "repo": "Testpatch", "tag": "latest"},
+            {"user": "YT-Advanced", "repo": "Testinte", "tag": "latest"}
         ]
 
     def _download(self, url: str, name: str) -> str:
@@ -75,7 +75,7 @@ class Downloader:
             for patch in patches:
                 for package in patch["compatiblePackages"]:
                     if package["name"] == app_reference[app_name]["name"]:
-                        version = package["versions"]
+                        version = package["18.31.37"]
 
                         if len(version) == 0:
                             continue
