@@ -75,7 +75,7 @@ class Downloader:
             for patch in patches:
                 for package in patch["compatiblePackages"]:
                     if package["name"] == app_reference[app_name]["name"]:
-                        version = package["18.31.37"]
+                        version = package["versions"]
 
                         if len(version) == 0:
                             continue
